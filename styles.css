@@ -1948,7 +1948,7 @@ body.contact-page {
 }
 
 .contact-page .container {
-  width: min(1280px, 100% - 2.6rem);
+  width: min(1400px, 100% - 2.4rem);
 }
 
 .contact-hero {
@@ -2130,7 +2130,7 @@ body.about-page {
 }
 
 .about-page .container {
-  width: min(1200px, 100% - 2.8rem);
+  width: min(1400px, 100% - 2.4rem);
 }
 
 .about-hero {
