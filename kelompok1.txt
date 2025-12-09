@@ -1,0 +1,31 @@
+Tema: Kesehatan Mental Gen Z (KEMENGEZ)
+Deskripsi singkat: Website edukasi dan dukungan ringan untuk Gen Z yang ingin mengenal kesehatan mental. Fokus pada konten ramah remaja, tampilan modern, dan fitur interaktif sederhana (toggle, slider, pop-up).
+
+Struktur proyek:
+- index.html      : Beranda, hero, CTA cek stres, info masalah umum.
+- edukasi.html    : Artikel/edukasi kesehatan mental (slider/kartu konten).
+- about.html      : Profil KEMENGEZ, visi misi, tim pengembang.
+- contact.html    : Form kontak/pesan dan info media sosial.
+- script.js       : Toggle tema, interaksi dasar (misal modal/popup/slider).
+- styles.css      : Styling utama seluruh halaman.
+- img/            : Logo, ilustrasi tim, hero, avatar.
+
+Anggota dan pembagian tugas (detail):
+- Rifky Faturrachman Puloo – Frontend Developer (Lead Implementasi)
+  Tugas: Menyusun struktur HTML untuk semua halaman; menghubungkan navbar/footer konsisten; membangun hero, grid konten, dan komponen interaktif; menulis/menyesuaikan CSS global; mengintegrasikan aset gambar; memastikan kompatibilitas dasar di desktop/mobile; merapikan kode sebelum rilis.
+
+- Muhammad Raihan Balyandoko – Asisten Programmer (QA & Testing)
+  Tugas: Menguji fitur interaktif di script.js (toggle tema, slider/popup); mengecek responsivitas di berbagai viewport; menemukan bug tampilan/fungsi lalu membuat daftar perbaikan; membantu verifikasi link internal (Beranda, Edukasi, About, Kontak) dan aset; memberi masukan optimasi performa sederhana (kompresi gambar opsional, load font).
+
+- Shafira Ardaneza Azahrah – Dokumentasi Utama & Kontributor Figma (Konten)
+  Tugas: Menulis dokumentasi proyek (ringkasan fitur, cara pakai, struktur file); menyiapkan dan merapikan copywriting artikel/edukasi; memastikan nada bahasa ramah Gen Z; mencatat perubahan versi dan catatan rilis; membantu sinkronisasi desain Figma dengan konten aktual di HTML.
+
+- Maulana Akbar Junaidi – UI Concept Creator & Penjelas Alur Program (Desain)
+  Tugas: Menetapkan konsep warna, tipografi, spacing, dan mood visual; menggambar wireframe/konsep Figma; menyusun alur navigasi (header-nav-footer, CTA utama); memeriksa konsistensi komponen (kartu, tombol, pill); memberi panduan gaya untuk implementasi CSS; meninjau kesesuaian final dengan konsep.
+
+Fitur utama yang sudah/direncanakan:
+- Toggle tema (visual switch) pada header.
+- Layout responsif untuk hero, grid masalah umum, kartu tim, dan slider edukasi.
+- Artikel edukasi terpisah (beberapa halaman HTML khusus topik kesehatan mental).
+- CTA cek stres dan latihan napas sebagai pintu ke konten interaktif ringan.
+- Footer dengan site map dan partner/logo pendukung.
