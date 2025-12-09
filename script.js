@@ -5,23 +5,63 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ================== TES LEVEL STRES ================== */
 
   /* Toggle visual + dark mode */
-  const toggleTrack = document.querySelector(".toggle-track");
+  const toggleTracks = document.querySelectorAll(".toggle-track");
   const bodyEl = document.body;
 
   const applyTheme = (isDark) => {
-    if (!toggleTrack) return;
-    toggleTrack.classList.toggle("is-on", isDark);
+    if (!toggleTracks.length) return;
+    toggleTracks.forEach((track) => track.classList.toggle("is-on", isDark));
     bodyEl.classList.toggle("dark-mode", isDark);
   };
 
   applyTheme(bodyEl.classList.contains("dark-mode"));
 
-  if (toggleTrack) {
-    toggleTrack.addEventListener("click", () => {
-      const next = !bodyEl.classList.contains("dark-mode");
-      applyTheme(next);
+  if (toggleTracks.length) {
+    toggleTracks.forEach((track) =>
+      track.addEventListener("click", () => {
+        const next = !bodyEl.classList.contains("dark-mode");
+        applyTheme(next);
+      })
+    );
+  }
+
+  /* Mobile nav */
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const mobileMenuBackdrop = document.getElementById("mobileMenuBackdrop");
+  const mobileMenuClose = document.getElementById("mobileMenuClose");
+  const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+  const toggleMobileMenu = (open) => {
+    if (!mobileMenuBackdrop) return;
+    mobileMenuBackdrop.classList.toggle("is-open", open);
+    mobileMenuBackdrop.setAttribute("aria-hidden", open ? "false" : "true");
+  };
+
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener("click", () => toggleMobileMenu(true));
+  }
+
+  if (mobileMenuClose) {
+    mobileMenuClose.addEventListener("click", () => toggleMobileMenu(false));
+  }
+
+  if (mobileMenuBackdrop) {
+    mobileMenuBackdrop.addEventListener("click", (e) => {
+      if (e.target === mobileMenuBackdrop) toggleMobileMenu(false);
     });
   }
+
+  if (mobileNavLinks.length) {
+    mobileNavLinks.forEach((link) =>
+      link.addEventListener("click", () => toggleMobileMenu(false))
+    );
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      toggleMobileMenu(false);
+    }
+  });
 
   const questionCards = document.querySelectorAll(".question-card");
   const resultBtn = document.getElementById("seeResultBtn");
