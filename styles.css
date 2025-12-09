@@ -277,6 +277,7 @@ img {
   font-weight: 400;
   box-shadow: var(--shadow-pill);
   transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+  border: 1px solid transparent;
 }
 
 .nav-pill:hover {
@@ -285,10 +286,10 @@ img {
 }
 
 .nav-pill.active {
-  background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
+  background: transparent;
   color: #c55f93;
-  border: 1px solid #e7c4e3;
-  box-shadow: none;
+  border: 1px solid #c55f93;
+  box-shadow: inset 0 0 0 1px rgba(197, 95, 147, 0.18);
 }
 
 /* Main Toggle Container */
@@ -1236,14 +1237,16 @@ body.dark-mode {
 
 .dark-mode .nav-pill {
   background: #dca9d4;
-  color: #1f0f1a;
-  box-shadow: 0 8px 16px rgba(190, 143, 214, 0.4);
+  color: #000000;
+  border: 1px solid #dca9d4;
+  box-shadow: 0 8px 18px rgba(190, 143, 214, 0.35);
 }
 
 .dark-mode .nav-pill.active {
-  background: #000000;
-  color: #be8fd6;
-  border-color: rgba(190, 143, 214, 0.4);
+  background: transparent;
+  color: #dca9d4;
+  border-color: #dca9d4;
+  box-shadow: inset 0 0 0 1px rgba(190, 143, 214, 0.45);
 }
 
 /* Toggle overrides for dark mode removed as new toggle handles its own state */
@@ -2082,13 +2085,14 @@ body.contact-page.dark-mode {
   background: #dca9d4;
   color: #000000;
   border: 1px solid #dca9d4;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 18px rgba(190, 143, 214, 0.35);
 }
 
 .dark-mode .nav-pill.active {
-  background: #000000;
-  color: #be8fd6;
-  border-color: #be8fd6;
+  background: transparent;
+  color: #dca9d4;
+  border-color: #dca9d4;
+  box-shadow: inset 0 0 0 1px rgba(190, 143, 214, 0.45);
 }
 
 @media (max-width: 1100px) {
@@ -2183,6 +2187,7 @@ body.about-page {
   border-radius: 32px;
   box-shadow: 0 22px 48px rgba(188, 94, 145, 0.2);
   margin-left: auto;
+  margin-right: auto;
 }
 
 .vision-mission {
@@ -2264,10 +2269,18 @@ body.about-page {
 }
 
 .about-page .nav-pill.active {
-  background: #ffffff;
+  background: transparent;
   color: #c55f93;
-  border: 1px solid #e7c4e3;
-  box-shadow: none;
+  border: 1px solid #c55f93;
+  box-shadow: inset 0 0 0 1px rgba(197, 95, 147, 0.18);
+}
+
+.about-page.dark-mode .nav-pill.active,
+body.about-page.dark-mode .nav-pill.active {
+  background: transparent;
+  color: #dca9d4;
+  border-color: #dca9d4;
+  box-shadow: inset 0 0 0 1px rgba(190, 143, 214, 0.45);
 }
 
 /* Dark mode overrides */
