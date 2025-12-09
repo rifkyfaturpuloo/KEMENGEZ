@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KEMENGEZ - Beranda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ============ HEADER / NAVBAR ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="img/kemengez-text.png" alt="KEMENGEZ" class="brand-logo-text" />
+      </a>
+
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-pill active">Beranda</a></li>
+          <li><a href="edukasi.html" class="nav-pill">Edukasi</a></li>
+          <li><a href="about.html" class="nav-pill">Tentang</a></li>
+          <li><a href="contact.html" class="nav-pill">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Toggle visual (dummy) -->
+      <div class="toggle">
+        <div class="toggle-track">
+          <!-- Icon Sun (Track - Left) -->
+          <span class="toggle-sun">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.93l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zm12.37 12.37l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zm1.41-10.96l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zM7.05 18.36L5.64 19.78c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L8.46 19.78c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0z" />
+            </svg>
+          </span>
+          <!-- Icon Moon (Track - Right) -->
+          <span class="toggle-moon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z" />
+            </svg>
+          </span>
+          <div class="toggle-thumb">
+            <!-- Icon Sun (Thumb) -->
+            <span class="thumb-icon thumb-icon--sun">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.93l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zm12.37 12.37l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zm1.41-10.96l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zM7.05 18.36L5.64 19.78c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L8.46 19.78c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0z" />
+              </svg>
+            </span>
+            <!-- Icon Moon (Thumb) -->
+            <span class="thumb-icon thumb-icon--moon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MAIN ============ -->
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="hero-tag">Kesehatan Mental Gen Z</span>
+
+          <h1 class="hero-title">
+            Jaga Kesehatan<br />
+            Mentalmu, Gen Z!
+          </h1>
+
+          <p class="hero-paragraph">
+            KEMENGEZ adalah ruang aman digital untuk kamu yang ingin cerita, belajar, dan lebih paham tentang perasaan
+            sendiri tanpa dihakimi. Di sini kamu bisa memahami stres, overthinking, tekanan sekolah, dan drama media
+            sosial dengan bahasa yang dekat dengan dunia remaja.
+          </p>
+
+          <p class="hero-paragraph">
+            KEMENGEZ bukan pengganti psikolog, tapi jadi langkah awal yang ramah untuk pelajar SMP, SMA, dan SMK yang
+            ingin mulai peduli dengan kesehatan mental.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#cek-stres" class="btn hero-btn">Cek Level Stres</a>
+            <a href="#breathing" class="btn hero-btn">Latihan Tahan Napas</a>
+            <a href="edukasi.html" class="btn hero-btn">Baca Edukasi</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <img src="img/hero-mental-health.png" alt="Ilustrasi kesehatan mental Gen Z" class="hero-image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION: HAL-HAL YANG SERING BIKIN KEPALA PENUH ============ -->
+    <section class="problems">
+      <div class="container">
+        <h2 class="problems-title">
+          Hal-Hal yang Sering Bikin Kepala Penuh
+        </h2>
+        <p class="problems-subtitle">
+          Kamu nggak sendirian kalau merasa capek secara mental. Banyak remaja dan Gen Z yang juga berjuang dengan
+          pikiran yang rame dan tekanan di sekelilingnya.
+        </p>
+
+        <div class="problems-grid">
+          <!-- Card 1 -->
+          <article class="problem-card">
+            <div class="problem-icon-wrap">
+              <div class="problem-icon-circle">
+                <img src="img/icon-overthinking.png" alt="Ikon overthinking" />
+              </div>
+            </div>
+            <h3 class="problem-heading">
+              <span class="problem-heading-main">Overthinking</span>
+              <span class="problem-heading-accent"> 24/7</span>
+            </h3>
+            <p class="problem-text">
+              Banyak pelajar sering kepikiran masa depan, nilai, pilihan jurusan, sampai komentar orang lain di dunia
+              nyata maupun di media sosial.
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="problem-card">
+            <div class="problem-icon-wrap">
+              <div class="problem-icon-circle">
+                <img src="img/icon-burnout.png" alt="Ikon burnout dari tugas" />
+              </div>
+            </div>
+            <h3 class="problem-heading">
+              <span class="problem-heading-main">Burnout dari</span><br />
+              <span class="problem-heading-main">Tugas dan Target</span>
+            </h3>
+            <p class="problem-text">
+              Burnout adalah rasa lelah fisik dan mental yang dalam, biasanya muncul ketika tugas numpuk, ekskul padat,
+              dan target nilai tinggi jalan bersamaan.
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="problem-card">
+            <div class="problem-icon-wrap">
+              <div class="problem-icon-circle">
+                <img src="img/icon-social-media.png" alt="Ikon tekanan media sosial" />
+              </div>
+            </div>
+            <h3 class="problem-heading">
+              <span class="problem-heading-main">Tekanan</span><br />
+              <span class="problem-heading-main">Media Sosial</span>
+            </h3>
+            <p class="problem-text">
+              Scroll medsos bisa bikin senang, tapi juga bikin kamu bandingin diri, takut ketinggalan tren, dan merasa
+              nggak cukup baik karena filter dan standar yang nggak realistis.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION: TES SINGKAT CEK LEVEL STRES ============ -->
+    <section class="stress-test" id="cek-stres">
+      <div class="container">
+        <h2 class="stress-title">
+          Tes Singkat Cek Level Stress Kamu
+        </h2>
+        <p class="stress-subtitle">
+          Tes ini bukan alat diagnosis resmi, tapi bisa bantu kamu dapetin gambaran kasar tentang seberapa tinggi stres
+          yang sedang kamu rasakan akhir-akhir ini.
+        </p>
+
+        <div class="stress-questions">
+          <!-- Q1 -->
+          <div class="question-card" data-question="1">
+            <p class="question-text">
+              Seberapa sering kamu susah tidur karena kepikiran sesuatu?
+            </p>
+            <div class="question-options">
+              <button class="option" type="button" data-score="0">
+                <span class="option-circle"></span>
+                <span class="option-label">Jarang atau hampir tidak pernah</span>
+              </button>
+              <button class="option" type="button" data-score="1">
+                <span class="option-circle"></span>
+                <span class="option-label">Kadang-kadang</span>
+              </button>
+              <button class="option" type="button" data-score="2">
+                <span class="option-circle"></span>
+                <span class="option-label">Hampir setiap malam</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="question-card" data-question="2">
+            <p class="question-text">
+              Seberapa sering kamu merasa capek banget padahal aktivitasmu biasa saja?
+            </p>
+            <div class="question-options">
+              <button class="option" type="button" data-score="0">
+                <span class="option-circle"></span>
+                <span class="option-label">Jarang, biasanya masih berenergi</span>
+              </button>
+              <button class="option" type="button" data-score="1">
+                <span class="option-circle"></span>
+                <span class="option-label">Lumayan sering</span>
+              </button>
+              <button class="option" type="button" data-score="2">
+                <span class="option-circle"></span>
+                <span class="option-label">Hampir setiap hari</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="question-card" data-question="3">
+            <p class="question-text">
+              Saat ada masalah, kamu lebih sering menyimpannya sendiri sampai mengganggu fokus atau tidak?
+            </p>
+            <div class="question-options">
+              <button class="option" type="button" data-score="0">
+                <span class="option-circle"></span>
+                <span class="option-label">Biasanya langsung cerita ke orang yang dipercaya</span>
+              </button>
+              <button class="option" type="button" data-score="1">
+                <span class="option-circle"></span>
+                <span class="option-label">Kadang disimpan, kadang diceritakan</span>
+              </button>
+              <button class="option" type="button" data-score="2">
+                <span class="option-circle"></span>
+                <span class="option-label">
+                  Sering banget disimpan sendiri sampai kepikiran terus
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="question-card" data-question="4">
+            <p class="question-text">
+              Seberapa sering kamu membandingkan diri dengan orang lain di media sosial?
+            </p>
+            <div class="question-options">
+              <button class="option" type="button" data-score="0">
+                <span class="option-circle"></span>
+                <span class="option-label">Jarang, lebih fokus ke diri sendiri</span>
+              </button>
+              <button class="option" type="button" data-score="1">
+                <span class="option-circle"></span>
+                <span class="option-label">
+                  Lumayan sering tapi masih bisa dikendalikan
+                </span>
+              </button>
+              <button class="option" type="button" data-score="2">
+                <span class="option-circle"></span>
+                <span class="option-label">Hampir setiap kali buka media sosial</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="question-card" data-question="5">
+            <p class="question-text">
+              Seberapa sering kamu merasa "nggak cukup baik" atau "nggak berharga"?
+            </p>
+            <div class="question-options">
+              <button class="option" type="button" data-score="0">
+                <span class="option-circle"></span>
+                <span class="option-label">
+                  Jarang, biasanya masih bisa menghargai diri sendiri
+                </span>
+              </button>
+              <button class="option" type="button" data-score="1">
+                <span class="option-circle"></span>
+                <span class="option-label">
+                  Kadang muncul, terutama saat lagi banyak masalah
+                </span>
+              </button>
+              <button class="option" type="button" data-score="2">
+                <span class="option-circle"></span>
+                <span class="option-label">Sering banget merasa seperti itu</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="stress-button-wrap">
+          <button class="btn stress-result-btn" type="button" id="seeResultBtn">
+            Lihat Hasil Level Stres
+          </button>
+        </div>
+
+        <div class="stress-result-card is-hidden" id="stressResultCard">
+          <h3 class="stress-result-title" id="stressResultTitle">
+            Hasil Level Stress Kamu
+          </h3>
+          <p class="stress-result-level" id="stressResultLevel">
+            Belum ada hasil
+          </p>
+          <p class="stress-result-text" id="stressResultText">
+            Jawab dulu semua pertanyaan di atas, lalu klik tombol "Lihat Hasil Level Stres" untuk melihat gambaran umum
+            level stresmu.
+          </p>
+          <p class="stress-result-disclaimer" id="stressResultDisclaimer">
+            Disclaimer: Tes singkat ini hanya gambaran umum dan tidak bisa menggantikan penilaian tenaga profesional.
+            Jika kamu merasa sangat tertekan, cobalah bicara dengan orang dewasa yang kamu percaya atau tenaga
+            kesehatan jiwa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION: LATIHAN NAPAS 4-4-4 ============ -->
+    <section class="breathing" id="breathing">
+      <div class="container breathing-grid">
+        <div class="breathing-image-wrap">
+          <img src="img/breathing-exercise.png" alt="Latihan napas 4-4-4" class="breathing-image" />
+        </div>
+
+        <div class="breathing-text">
+          <h2 class="breathing-title">
+            Mari Tenangkan Diri
+          </h2>
+          <p class="breathing-paragraph">
+            Kadang yang kita butuhkan cuma jeda sebentar. Teknik pernapasan <strong>4-4-4 (box breathing)</strong> bisa
+            bantu menurunkan detak jantung dan bikin rileks seketika.
+          </p>
+
+          <button class="btn hero-btn breathing-btn" type="button" id="openBreathingBtn">
+            Coba Latihan Pernapasan
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-col footer-brand">
+        <img src="img/kemengez-text.png" alt="Logo KEMENGEZ" class="footer-logo-main" />
+        <p class="footer-brand-text">
+          KEMENGEZ (Kesehatan Mental Gen Z) adalah ruang digital yang dirancang khusus untuk membantu remaja dan anak
+          muda memahami, merawat, dan lebih peka terhadap kesehatan mentalnya.
+        </p>
+      </div>
+
+      <div class="footer-col footer-sitemap">
+        <h4 class="footer-heading">Site Map</h4>
+        <nav class="footer-nav">
+          <a href="index.html" class="footer-pill">Beranda</a>
+          <a href="edukasi.html" class="footer-pill">Edukasi</a>
+          <a href="about.html" class="footer-pill">Tentang</a>
+          <a href="contact.html" class="footer-pill">Kontak</a>
+        </nav>
+      </div>
+
+      <div class="footer-col footer-partner">
+        <h4 class="footer-heading">Partner &amp; Support</h4>
+        <div class="footer-partner-logos">
+          <img src="img/logo-pplg.png" alt="Logo PPLG" class="partner-logo" />
+          <img src="img/logo-smkn12.png" alt="Logo SMKN 12" class="partner-logo" />
+          <img src="img/real-arts-school.png" alt="Real Arts School" class="partner-logo" />
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-wrap">
+      <div class="container footer-bottom">
+        <div class="footer-divider"></div>
+
+        <p class="footer-copy">
+          &copy; 2025 KEMENGEZ &mdash; Semua Hak Dilindungi
+        </p>
+        <p class="footer-copy-small">
+          Seluruh konten, desain, dan elemen pada situs ini dilindungi oleh hukum yang berlaku. Dilarang menyalin,
+          mendistribusikan, atau menggunakan materi apa pun dari situs ini tanpa izin resmi dari KEMENGEZ.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ MODALS TES STRES ============ -->
+  <div class="modal-backdrop" id="modalIncomplete">
+    <div class="modal-card">
+      <p class="modal-title">
+        Selesaikan Semua Pertanyaan Tes Untuk Memunculkan Hasil Level Stres
+      </p>
+      <button class="btn modal-btn" type="button" id="modalIncompleteOk">
+        Baik
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modalConfirm">
+    <div class="modal-card">
+      <p class="modal-title">
+        Apakah Anda Yakin Melihat Hasil Tes Singkat Level Stres?
+      </p>
+      <div class="modal-btn-row">
+        <button class="btn modal-btn" type="button" id="modalConfirmYes">
+          Iya
+        </button>
+        <button class="btn modal-btn" type="button" id="modalConfirmNo">
+          Tidak
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODALS LATIHAN NAPAS ============ -->
+  <div class="modal-backdrop" id="modalBreathIntro">
+    <div class="modal-card">
+      <p class="modal-small-label">Latihan Napas 4-4-4</p>
+      <h3 class="modal-title breathing-modal-title">
+        Siap Memulai Latihan?
+      </h3>
+      <p class="modal-subtext">
+        Ikuti instruksi di layar: Tarik napas 4 detik, Tahan 4 detik, Hembuskan 4 detik.
+      </p>
+
+      <div class="modal-btn-row">
+        <button class="btn modal-btn" type="button" id="breathStartBtn">
+          Mulai Latihan
+        </button>
+        <button class="btn modal-btn" type="button" id="breathIntroCloseBtn">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modalBreathGuide">
+    <div class="modal-card">
+      <p class="modal-small-label">Latihan Napas 4-4-4</p>
+      <p class="modal-subtext">
+        Ikuti instruksi di layar: Tarik napas 4 detik, Tahan 4 detik, Hembuskan 4 detik.
+      </p>
+
+      <h3 class="modal-title breathing-modal-title" id="breathPhaseTitle">
+        Tarik Napas Pelan Pelan
+      </h3>
+
+      <div class="breath-chip" id="breathCounterChip">
+        4 Detik
+      </div>
+
+      <div class="modal-btn-row">
+        <button class="btn modal-btn" type="button" id="breathStopBtn">
+          Hentikan Latihan
+        </button>
+        <button class="btn modal-btn" type="button" id="breathCloseBtn">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

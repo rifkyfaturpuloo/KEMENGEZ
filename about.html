@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang KEMENGEZ | Kesehatan Mental Gen Z</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body.about-page {
+      background: #ffffff;
+      color: var(--text-primary);
+    }
+
+    /* Page-specific container width to match reference */
+    .about-page .container {
+      width: min(1200px, 100% - 2.8rem);
+    }
+
+    .about-hero {
+      padding: 2rem 0 1.6rem;
+    }
+
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 1.6rem;
+      align-items: start;
+    }
+
+    .pill-heading {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1.6rem;
+      border-radius: 999px;
+      background: #bc5e91;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 12px 24px rgba(188, 94, 145, 0.28);
+      margin-bottom: 1.1rem;
+    }
+
+    .about-title {
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      line-height: 1.08;
+      margin: 0 0 1rem;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 800;
+    }
+
+    .about-lead {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: #bc5e91;
+      max-width: 660px;
+      margin-bottom: 0.9rem;
+    }
+
+    .about-hero-img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 32px;
+      box-shadow: 0 22px 48px rgba(188, 94, 145, 0.2);
+      margin-left: auto;
+    }
+
+    .vision-mission {
+      background: #fffafc;
+      border: 1.5px solid #f4d9e6;
+      border-radius: 32px;
+      padding: 1.8rem 1.6rem;
+      box-shadow: 0 18px 34px rgba(188, 94, 145, 0.12);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin: 2.2rem auto 0;
+      width: 500%;
+      max-width: 1200px;
+    }
+
+    .vm-card {
+      background: transparent;
+      border: none;
+      padding: 0;
+      box-shadow: none;
+    }
+
+    .vm-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      text-align: center;
+      color: #9c8ff3;
+      margin-bottom: 0.7rem;
+    }
+
+    .vm-card p,
+    .vm-card ul {
+      color: #bc5e91;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .vm-card ul {
+      padding-left: 1rem;
+      list-style: disc;
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .disclaimer {
+      margin: 2rem 0 1rem;
+      background: #bc5e91;
+      color: #ffffff;
+      border-radius: 26px;
+      padding: 1.8rem 1.6rem;
+      box-shadow: 0 18px 34px rgba(188, 94, 145, 0.26);
+      border: 1px solid #eac6dd;
+    }
+
+    .disclaimer h3 {
+      margin: 0 0 0.6rem;
+      font-size: 1.4rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .disclaimer p {
+      margin: 0 0 0.6rem;
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+
+    .disclaimer ul {
+      margin: 0.4rem 0 0.4rem 1.2rem;
+      padding: 0;
+      list-style: disc;
+    }
+
+    .team-section {
+      padding: 2.2rem 0 0.8rem;
+      text-align: center;
+    }
+
+    /* Active nav pill outlined (match reference pill) */
+    .about-page .nav-pill.active {
+      background: #ffffff;
+      color: #c55f93;
+      border: 1px solid #e7c4e3;
+      box-shadow: none;
+    }
+
+    /* Dark mode overrides */
+    body.about-page.dark-mode {
+      background: #000000;
+      color: #be8fd6;
+    }
+
+    .dark-mode .about-title,
+    .dark-mode .vm-title {
+      color: transparent;
+      background: linear-gradient(90deg,
+          #BE8FD6 0%,
+          #B297D9 12%,
+          #ABA1DD 22%,
+          #A3A3DD 34%,
+          #93B3E4 44%,
+          #A4B0E0 52%,
+          #B5A9DA 61%,
+          #DCA9D4 66%,
+          #DCA9D4 76%,
+          #DCA9D4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .dark-mode .about-lead,
+    .dark-mode .vm-card p,
+    .dark-mode .vm-card ul {
+      color: #be8fd6;
+    }
+
+    .dark-mode .about-hero-img {
+      box-shadow: 0 18px 36px rgba(190, 143, 214, 0.28);
+    }
+
+    .dark-mode .vision-mission {
+      background: #0d0a11;
+      border-color: rgba(190, 143, 214, 0.3);
+      box-shadow: 0 18px 34px rgba(190, 143, 214, 0.22);
+    }
+
+    .dark-mode .disclaimer {
+      background: #2c1c30;
+      border-color: rgba(190, 143, 214, 0.35);
+      box-shadow: 0 18px 34px rgba(190, 143, 214, 0.26);
+      color: #ffffff;
+    }
+
+    .dark-mode .team-card {
+      background: #0d0a11;
+      border-color: rgba(190, 143, 214, 0.28);
+      box-shadow: 0 12px 26px rgba(190, 143, 214, 0.18);
+    }
+
+    .dark-mode .team-name {
+      color: #be8fd6;
+    }
+
+    .dark-mode .team-role,
+    .dark-mode .team-text {
+      color: #be8fd6;
+    }
+
+    /* Dark mode nav pills */
+    .dark-mode .nav-pill {
+      background: #dca9d4;
+      color: #000000;
+      border: 1px solid #dca9d4;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+    }
+
+    .dark-mode .nav-pill.active {
+      background: #000000;
+      color: #dca9d4;
+      border: 1px solid #3a2c40;
+      box-shadow: 0 0 18px rgba(207, 163, 232, 0.35), 0 10px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .team-subtitle {
+      font-size: 1rem;
+      color: #b65b8d;
+      margin: 0.15rem 0 1.5rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.1rem;
+      margin-top: 0.6rem;
+    }
+
+    .team-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 1.2rem 1.1rem 1.4rem;
+      border: 1px solid #f1d7e8;
+      box-shadow: 0 12px 26px rgba(188, 94, 145, 0.14);
+      text-align: left;
+    }
+
+    .team-avatar {
+      width: 100%;
+      max-width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 0.8rem;
+      box-shadow: 0 10px 20px rgba(188, 94, 145, 0.18);
+    }
+
+    .team-name {
+      text-align: center;
+      margin: 0 0 0.2rem;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #9c8ff3;
+    }
+
+    .team-role {
+      text-align: center;
+      margin: 0 0 0.7rem;
+      font-size: 0.95rem;
+      color: #bc5e91;
+      font-weight: 600;
+    }
+
+    .team-text {
+      font-size: 0.94rem;
+      line-height: 1.55;
+      color: #b65b8d;
+      margin: 0;
+      text-align: left;
+    }
+
+    @media (max-width: 900px) {
+      .about-hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-hero-img {
+        max-width: 520px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-page .container {
+        width: min(100%, 100% - 1.6rem);
+      }
+
+      .about-hero {
+        padding: 1.6rem 0 1.2rem;
+      }
+
+      .about-title {
+        font-size: clamp(2rem, 6vw, 2.8rem);
+      }
+
+      .vision-mission {
+        padding: 1.4rem 1.2rem;
+        gap: 0.9rem;
+        grid-template-columns: 1fr;
+      }
+
+      .vm-title {
+        font-size: 1.25rem;
+      }
+
+      .vm-card p,
+      .vm-card ul {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .about-title {
+        font-size: 1.9rem;
+      }
+
+      .about-lead {
+        font-size: 0.96rem;
+      }
+
+      .vision-mission {
+        padding: 1.2rem 1rem;
+      }
+
+      .pill-heading {
+        font-size: 0.9rem;
+        padding: 0.55rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="about-page">
+  <!-- Navbar reused from main site -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="img/kemengez-text.png" alt="KEMENGEZ" class="brand-logo-text" />
+      </a>
+
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-pill">Beranda</a></li>
+          <li><a href="edukasi.html" class="nav-pill">Edukasi</a></li>
+          <li><a href="about.html" class="nav-pill active">Tentang</a></li>
+          <li><a href="contact.html" class="nav-pill">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="toggle">
+        <div class="toggle-track">
+          <span class="toggle-sun">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.93l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zm12.37 12.37l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zm1.41-10.96l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zM7.05 18.36L5.64 19.78c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L8.46 19.78c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0z" />
+            </svg>
+          </span>
+          <span class="toggle-moon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z" />
+            </svg>
+          </span>
+          <div class="toggle-thumb">
+            <span class="thumb-icon thumb-icon--sun">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.93l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zm12.37 12.37l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zm1.41-10.96l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0zM7.05 18.36L5.64 19.78c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L8.46 19.78c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0z" />
+              </svg>
+            </span>
+            <span class="thumb-icon thumb-icon--moon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container about-hero">
+      <div class="about-hero-grid">
+        <div>
+          <div class="pill-heading">Tentang KEMENGEZ</div>
+          <h1 class="about-title">Tentang KEMENGEZ<br />Kesehatan Mental Gen Z</h1>
+          <p class="about-lead">
+            KEMENGEZ (Kesehatan Mental Gen Z) adalah ruang digital yang dirancang khusus untuk membantu remaja dan anak muda memahami, merawat, dan lebih peka terhadap kesehatan mentalnya.
+          </p>
+          <p class="about-lead">
+            Di tengah tuntutan sekolah, ekspektasi lingkungan, dan tekanan media sosial, KEMENGEZ ingin jadi tempat yang terasa aman, hangat, dan mudah didekati.
+          </p>
+          <div class="vision-mission">
+            <div class="vm-card">
+              <div class="vm-title">Visi</div>
+              <p>Menjadi ruang belajar dan dukungan digital yang ramah, aman, dan mudah diakses oleh Gen Z untuk menjaga kesehatan mental.</p>
+            </div>
+            <div class="vm-card">
+              <div class="vm-title">Misi</div>
+              <ul>
+                <li>Menyediakan konten kesehatan mental yang ramah remaja.</li>
+                <li>Mengajak siswa saling mendukung tanpa bullying.</li>
+                <li>Mendorong keberanian untuk mencari bantuan saat butuh.</li>
+                <li>Menormalkan percakapan tentang emosi dan stres di sekolah.</li>
+                <li>Menjadi langkah awal sebelum mendapatkan bantuan profesional.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="img/team-illustration.png" alt="Ilustrasi tim KEMENGEZ berkolaborasi" class="about-hero-img" />
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="disclaimer">
+        <h3>Disclaimer</h3>
+        <p>Website ini bukan alat diagnosis medis dan bukan pengganti konsultasi dengan psikolog, psikiater, atau tenaga kesehatan profesional.</p>
+        <p>Jika kamu merasa sangat sedih, marah terus-menerus, atau punya keinginan untuk menyakiti diri sendiri — segera bicara dengan orang tua, wali, guru BK, atau hubungi layanan darurat:</p>
+        <ul>
+          <li>Layanan Darurat Kemenkes: 119 (gratis)</li>
+          <li>Into The Light Indonesia: 0812-1250-0999 (WhatsApp)</li>
+        </ul>
+        <p>Kesehatan mentalmu adalah prioritas. Jangan tunggu sampai “parah” — minta tolong itu langkah pertama menuju sembuh.</p>
+      </div>
+    </section>
+
+    <section class="container team-section">
+      <h2 class="about-title" style="font-size: clamp(2rem, 3.2vw, 2.6rem);">Tim Pengembang</h2>
+      <p class="team-subtitle">Empat siswa yang berkolaborasi mengerjakan desain, konten, dan kode untuk KEMENGEZ.</p>
+
+      <div class="team-grid">
+        <article class="team-card">
+          <img src="img/avatar-1.png" alt="Rifky Faturrachman Puloo" class="team-avatar" />
+          <h3 class="team-name">Rifky Faturrachman Puloo</h3>
+          <p class="team-role">Frontend Developer</p>
+          <p class="team-text">Membangun seluruh tampilan dan fitur KEMENGEZ menggunakan HTML, CSS, dan JavaScript. Mengimplementasikan semua desain dari Figma dan memastikan website berfungsi penuh serta responsif.</p>
+        </article>
+
+        <article class="team-card">
+          <img src="img/avatar-4.png" alt="Muhammad Raihan Balyandoko" class="team-avatar" />
+          <h3 class="team-name">Muhammad Raihan Balyandoko</h3>
+          <p class="team-role">Asisten Programmer</p>
+          <p class="team-text">Mengujicoba seluruh fitur website, menemukan bug, dan memastikan tampilan stabil baik di HP maupun laptop. Berperan penting dalam memastikan kualitas akhir KEMENGEZ sebelum digunakan.</p>
+        </article>
+
+        <article class="team-card">
+          <img src="img/avatar-2.png" alt="Shafira Ardaneza Azahrah" class="team-avatar" />
+          <h3 class="team-name">Shafira Ardaneza Azahrah</h3>
+          <p class="team-role">Dokumentasi Utama & Kontributor Figma</p>
+          <p class="team-text">Menulis dokumentasi lengkap KEMENGEZ, mencakup penjelasan fitur, alur kerja website, dan cara penggunaan halaman. Juga membantu proses desain di Figma menjaga keselarasan tampilan.</p>
+        </article>
+
+        <article class="team-card">
+          <img src="img/avatar-3.png" alt="Maulana Akbar Junaidi" class="team-avatar" />
+          <h3 class="team-name">Maulana Akbar Junaidi</h3>
+          <p class="team-role">UI Concept Creator & Penjelas Alur Program</p>
+          <p class="team-text">Merancang konsep tampilan utama, warna, dan struktur visual melalui Figma. Menjelaskan alur logika program dan membantu penyusunan dokumentasi agar mudah dipahami.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-col footer-brand">
+        <img src="img/kemengez-text.png" alt="Logo KEMENGEZ" class="footer-logo-main" />
+        <p class="footer-brand-text">
+          KEMENGEZ (Kesehatan Mental Gen Z) adalah ruang digital yang dirancang khusus untuk membantu remaja dan anak
+          muda memahami, merawat, dan lebih peka terhadap kesehatan mentalnya.
+        </p>
+      </div>
+
+      <div class="footer-col footer-sitemap">
+        <h4 class="footer-heading">Site Map</h4>
+        <nav class="footer-nav">
+          <a href="index.html" class="footer-pill">Beranda</a>
+          <a href="edukasi.html" class="footer-pill">Edukasi</a>
+          <a href="about.html" class="footer-pill">Tentang</a>
+          <a href="contact.html" class="footer-pill">Kontak</a>
+        </nav>
+      </div>
+
+      <div class="footer-col footer-partner">
+        <h4 class="footer-heading">Partner &amp; Support</h4>
+        <div class="footer-partner-logos">
+          <img src="img/logo-pplg.png" alt="Logo PPLG" class="partner-logo" />
+          <img src="img/logo-smkn12.png" alt="Logo SMKN 12" class="partner-logo" />
+          <img src="img/real-arts-school.png" alt="Real Arts School" class="partner-logo" />
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-wrap">
+      <div class="container footer-bottom">
+        <div class="footer-divider"></div>
+
+        <p class="footer-copy">
+          &copy; 2025 KEMENGEZ &mdash; Semua Hak Dilindungi
+        </p>
+        <p class="footer-copy-small">
+          Seluruh konten, desain, dan elemen pada situs ini dilindungi oleh hukum yang berlaku. Dilarang
+          menyalin,
+          mendistribusikan, atau menggunakan materi apa pun dari situs ini tanpa izin resmi dari KEMENGEZ.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
