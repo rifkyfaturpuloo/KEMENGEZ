@@ -8,19 +8,53 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleTracks = document.querySelectorAll(".toggle-track");
   const bodyEl = document.body;
 
+  const THEME_STORAGE_KEY = "kemengez-theme";
+
+  const getSavedTheme = () => localStorage.getItem(THEME_STORAGE_KEY);
+  const saveTheme = (isDark) =>
+    localStorage.setItem(THEME_STORAGE_KEY, isDark ? "dark" : "light");
+
   const applyTheme = (isDark) => {
-    if (!toggleTracks.length) return;
-    toggleTracks.forEach((track) => track.classList.toggle("is-on", isDark));
     bodyEl.classList.toggle("dark-mode", isDark);
+    toggleTracks.forEach((track) => track.classList.toggle("is-on", isDark));
   };
 
-  applyTheme(bodyEl.classList.contains("dark-mode"));
+  const setTheme = (isDark, persist = true) => {
+    applyTheme(isDark);
+    if (persist) {
+      saveTheme(isDark);
+    }
+  };
+
+  const savedTheme = getSavedTheme();
+  const mediaQuery = window.matchMedia
+    ? window.matchMedia("(prefers-color-scheme: dark)")
+    : null;
+
+  const initialIsDark = savedTheme
+    ? savedTheme === "dark"
+    : Boolean(mediaQuery?.matches);
+
+  setTheme(initialIsDark, Boolean(savedTheme));
+
+  if (!savedTheme && mediaQuery) {
+    const handleSystemChange = (e) => {
+      if (!getSavedTheme()) {
+        setTheme(e.matches, false);
+      }
+    };
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", handleSystemChange);
+    } else if (mediaQuery.addListener) {
+      mediaQuery.addListener(handleSystemChange);
+    }
+  }
 
   if (toggleTracks.length) {
     toggleTracks.forEach((track) =>
       track.addEventListener("click", () => {
         const next = !bodyEl.classList.contains("dark-mode");
-        applyTheme(next);
+        setTheme(next, true);
       })
     );
   }
